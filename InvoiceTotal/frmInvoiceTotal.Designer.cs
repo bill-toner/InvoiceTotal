@@ -32,7 +32,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            txtSubtotal = new TextBox();
+            txtSubTotal = new TextBox();
             txtDiscountPercent = new TextBox();
             txtTotal = new TextBox();
             btnCalculate = new Button();
@@ -80,17 +80,17 @@
             label4.Text = "Total: ";
             label4.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // txtSubtotal
+            // txtSubTotal
             // 
-            txtSubtotal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            txtSubtotal.Location = new Point(195, 32);
-            txtSubtotal.Name = "txtSubtotal";
-            txtSubtotal.Size = new Size(150, 31);
-            txtSubtotal.TabIndex = 1;
+            txtSubTotal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSubTotal.Location = new Point(195, 32);
+            txtSubTotal.Name = "txtSubTotal";
+            txtSubTotal.Size = new Size(150, 31);
+            txtSubTotal.TabIndex = 1;
             // 
             // txtDiscountPercent
             // 
-            txtDiscountPercent.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtDiscountPercent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtDiscountPercent.Location = new Point(195, 88);
             txtDiscountPercent.Name = "txtDiscountPercent";
             txtDiscountPercent.ReadOnly = true;
@@ -100,7 +100,7 @@
             // 
             // txtTotal
             // 
-            txtTotal.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtTotal.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtTotal.Location = new Point(195, 185);
             txtTotal.Name = "txtTotal";
             txtTotal.ReadOnly = true;
@@ -117,6 +117,7 @@
             btnCalculate.TabStop = false;
             btnCalculate.Text = "&Calculate";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // btnExit
             // 
@@ -126,10 +127,11 @@
             btnExit.TabIndex = 3;
             btnExit.Text = "E&xit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // txtDiscountAmount
             // 
-            txtDiscountAmount.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtDiscountAmount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtDiscountAmount.Location = new Point(195, 137);
             txtDiscountAmount.Name = "txtDiscountAmount";
             txtDiscountAmount.ReadOnly = true;
@@ -150,7 +152,7 @@
             Controls.Add(btnCalculate);
             Controls.Add(txtTotal);
             Controls.Add(txtDiscountPercent);
-            Controls.Add(txtSubtotal);
+            Controls.Add(txtSubTotal);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -170,7 +172,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox txtSubtotal;
+        private TextBox txtSubTotal;
         private TextBox txtDiscountPercent;
         private TextBox txtTotal;
         private Button btnCalculate;
